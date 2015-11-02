@@ -27,6 +27,10 @@ module OmniAuth
         end
       end
 
+      uid {
+        request.params['scope'].gsub(/[^\w.]/, '')
+      }
+
     end
   end
 end
